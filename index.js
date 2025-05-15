@@ -18,6 +18,15 @@ mongoose.connect(dbURI).then(() => {
      console.error("Error connecting to MongoDB:", error);
 });
 
+app.get("/login",(req, res)=>{
+     const {id, password} = req.body;
+     if(id == 'admin123'&& password == 'adminpass123'){
+          return res.status(200).json({messgae : 'correct'})
+     }else{
+          return res.status(200).json({message : 'incorrect'})
+     }
+})
+
 app.get("/", (req, res) => {
      res.status(201).json({ message: "Welcome to the Loan Management System API" });
 });
