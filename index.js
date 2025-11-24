@@ -28,7 +28,7 @@ app.get("/login",(req, res)=>{
 })
 
 app.get("/", (req, res) => {
-     res.status(201).json({ message: "Welcome to the Loan Management System API" });
+     res.status(200).json({ message: "Welcome to the Loan Management System API" });
 });
 
 
